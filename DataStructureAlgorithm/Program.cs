@@ -12,7 +12,7 @@ class Program
 
             Console.WriteLine(" Select the option ");
 
-            Console.WriteLine("1.BinarySearch \n2.InsertionSort \n3.BubbleSort \n4.Anagram \n5.Exit ");
+            Console.WriteLine("1.BinarySearch \n2.InsertionSort \n3.BubbleSort \n4.Anagram \n5.UserInput \n6.Exit ");
 
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -37,6 +37,11 @@ class Program
                     anagram.CheckAnagram("Heart", "Earth");
                     break;
                 case 5:
+                    UserInput userInput = new UserInput();
+                    userInput.ReplaceString();
+                    break;
+
+                case 6:
                     flag = false;
                     break;
             }
