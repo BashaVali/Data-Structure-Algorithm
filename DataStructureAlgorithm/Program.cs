@@ -12,7 +12,7 @@ class Program
 
             Console.WriteLine(" Select the option ");
 
-            Console.WriteLine("1.BinarySearch \n2.InsertionSort \n3.BubbleSort \n4.Anagram \n5.UserInput \n6.Exit ");
+            Console.WriteLine("1.BinarySearch \n2.InsertionSort \n3.BubbleSort \n4.Anagram \n5.UserInput \n6.PrimeNumber \n7.Exit ");
 
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -40,8 +40,13 @@ class Program
                     UserInput userInput = new UserInput();
                     userInput.ReplaceString();
                     break;
-
                 case 6:
+                    Console.WriteLine("The prime numbers are : ");
+                    PrimeNumberRange primeNumberRange = new PrimeNumberRange();
+                    primeNumberRange.FindPrime();
+                    break;
+
+                case 7:
                     flag = false;
                     break;
             }
