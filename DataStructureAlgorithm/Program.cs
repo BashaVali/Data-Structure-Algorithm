@@ -4,6 +4,7 @@ class Program
 {
     public static string binaryTextPath = @"C:\Users\Basha\Documents\DotNet\PracticePrograms\Data-Structure-Algorithm\DataStructureAlgorithm\BinarySearch.txt";
     public static string numberTextPath = @"C:\Users\Basha\Documents\DotNet\PracticePrograms\Data-Structure-Algorithm\DataStructureAlgorithm\Files\Number.txt";
+    public static string BalancedParanthesisTextPath = @"C:\Users\Basha\Documents\DotNet\PracticePrograms\DataStructureAlgorithm\DatatStructureAlgorithm\Files\BalancedParanthesis.txt";
     public static void Main(string[] args)
     {
         bool flag = true;
@@ -13,7 +14,7 @@ class Program
 
             Console.WriteLine(" Select the option ");
 
-            Console.WriteLine("1.BinarySearch \n2.InsertionSort \n3.BubbleSort \n4.Anagram \n5.UserInput \n6.PrimeNumber \n7.LinkedListGeneric \n8.UnOrderedList \n9.OrderedList \n10.Exit ");
+            Console.WriteLine("1.BinarySearch \n2.InsertionSort \n3.BubbleSort \n4.Anagram \n5.UserInput \n6.PrimeNumber \n7.LinkedListGeneric \n8.UnOrderedList \n9.OrderedList \n10.Balanced Paranthesis \n11.Exit ");
 
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -60,8 +61,12 @@ class Program
                     OrderedList orderedList = new OrderedList();
                     orderedList.ReadTextFile(numberTextPath);
                     break;
-
                 case 10:
+                    BalancedParanthesis balancedParanthesis = new BalancedParanthesis();
+                    balancedParanthesis.ReadTextFile(BalancedParanthesisTextPath);
+                    break;
+
+                case 11:
                     flag = false;
                     break;
             }
