@@ -13,7 +13,7 @@ class Program
 
             Console.WriteLine(" Select the option ");
 
-            Console.WriteLine("1.BinarySearch \n2.InsertionSort \n3.BubbleSort \n4.Anagram \n5.UserInput \n6.PrimeNumber \n7.LinkedListGeneric \n8.Exit ");
+            Console.WriteLine("1.BinarySearch \n2.InsertionSort \n3.BubbleSort \n4.Anagram \n5.UserInput \n6.PrimeNumber \n7.LinkedListGeneric \n8.UnOrderedList \n9.Exit ");
 
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -52,8 +52,12 @@ class Program
                     linkedListGeneric.Delete("Delete");
                     linkedListGeneric.Display();
                     break;
-                
                 case 8:
+                    UnOrderedList unOrderedList = new UnOrderedList();
+                    unOrderedList.ReadAllTextFile(numberTextPath);
+                    break;
+
+                case 9:
                     flag = false;
                     break;
             }
